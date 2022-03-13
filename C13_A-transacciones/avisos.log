@@ -1,0 +1,34 @@
+[2022-03-12 17:02:27] [ ERROR] [Main:43] org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "2018 (PATIENT: ""DISCHARGEDATE"" DATE)"
+Data conversion error converting "2018 (PATIENT: ""DISCHARGEDATE"" DATE)"; SQL statement:
+INSERT INTO PATIENT VALUES(1,'Lucas','Vuoso','sasasasas',33489714 ,2022-03-01,'Vuoso','sasasasas') [22018-210]
+[2022-03-12 17:04:14] [ ERROR] [Main:43] org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "2018 (PATIENT: ""DISCHARGEDATE"" DATE)"
+Data conversion error converting "2018 (PATIENT: ""DISCHARGEDATE"" DATE)"; SQL statement:
+INSERT INTO PATIENT VALUES(1,'Lucas','Vuoso','sasasasas',33489714 ,2022-03-01,'Vuoso','sasasasas') [22018-210]
+[2022-03-12 17:08:06] [ INFO ] [Main:40] Se creó el paciente Lucassatisfactoriamente
+[2022-03-12 17:09:23] [ INFO ] [Main:40] Se creó el paciente Lucassatisfactoriamente
+[2022-03-12 17:11:07] [ INFO ] [Main:40] Se creó el paciente Lucassatisfactoriamente
+[2022-03-12 17:18:24] [ INFO ] [Main:38] Se creó el paciente Lucassatisfactoriamente
+[2022-03-12 17:36:32] [ ERROR] [Main:52] org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "EMPLEADO" no encontrada
+Table "EMPLEADO" not found; SQL statement:
+INSERT INTO EMPLEADO (ID, NAME, LASTNAME, ADDRESS, DNI, DISCHARGEDATE, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?) [42102-210]
+[2022-03-12 17:37:40] [ ERROR] [Main:52] org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "DATE" "01, 03, 2021"
+Cannot parse "DATE" constant "01, 03, 2021"; SQL statement:
+INSERT INTO PATIENT (ID, NAME, LASTNAME, ADDRESS, DNI, DISCHARGEDATE, USERNAME, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?) [22007-210]
+[2022-03-12 17:38:37] [ INFO ] [Main:49] Se creó el paciente Lucassatisfactoriamente
+[2022-03-12 17:47:13] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:47:13] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:48:35] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:48:35] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:48:35] [ ERROR] [Main:66] java.lang.ArithmeticException: / by zero
+[2022-03-12 17:50:47] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:50:47] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:50:47] [ ERROR] [Main:66] java.lang.ArithmeticException: / by zero
+[2022-03-12 17:52:03] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:52:03] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:52:03] [ ERROR] [Main:80] java.lang.ArithmeticException: / by zero
+[2022-03-12 17:52:29] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:52:29] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:52:29] [ ERROR] [Main:80] java.lang.ArithmeticException: / by zero
+[2022-03-12 17:54:59] [ INFO ] [Main:47] Se creó el paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:54:59] [ INFO ] [Main:57] Se modificó la contraseña del paciente Lucas Vuoso satisfactoriamente
+[2022-03-12 17:54:59] [ ERROR] [Main:80] java.lang.ArithmeticException: / by zero

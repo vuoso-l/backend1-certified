@@ -1,0 +1,69 @@
+[2022-03-10 17:10:06] [ ERROR] [Main:20] java.lang.Exception: not null
+[2022-03-10 17:10:26] [ ERROR] [Main:20] java.lang.Exception: not null
+[2022-03-10 17:24:05] [ ERROR] [Main:34] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.BUISNESS(ID) ( /* key:2 */ 2, 'Rodrigo', 34, 'Facebook', DATE '2022-05-31')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.BUISNESS(ID) ( /* key:2 */ 2, 'Rodrigo', 34, 'Facebook', DATE '2022-05-31')"; SQL statement:
+DROP TABLE IF EXISTS BUISNESS [23505-210]
+[2022-03-10 17:41:29] [ DEBUG] [Main:35] Se actualizaron datos
+[2022-03-10 17:44:36] [ DEBUG] [Main:37] Se actualizaron datos
+[2022-03-10 17:47:48] [ DEBUG] [Main:37] Se actualizaron datos
+[2022-03-10 17:47:48] [ INFO ] [Main:44] Se eliminó el empleado Pablo
+[2022-03-10 17:50:30] [ DEBUG] [Main:37] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-10 17:50:30] [ INFO ] [Main:44] Se eliminó el empleado Pablo
+[2022-03-10 17:50:30] [ INFO ] [Main:51] Se eliminó el empleado Rodrigo
+[2022-03-10 17:51:12] [ DEBUG] [Main:37] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-10 17:51:12] [ INFO ] [Main:44] Se eliminó el empleado Pablo
+[2022-03-10 17:51:12] [ INFO ] [Main:51] Se eliminó el empleado Rodrigo
+[2022-03-10 18:14:49] [ DEBUG] [Main:37] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-10 18:14:49] [ INFO ] [Main:44] Se eliminó el empleado Pablo
+[2022-03-10 18:14:49] [ INFO ] [Main:51] Se eliminó el empleado Rodrigo
+[2022-03-12 07:52:06] [ DEBUG] [Main:38] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 07:52:06] [ INFO ] [Main:44] Se eliminó el empleado Pablo
+[2022-03-12 07:52:06] [ INFO ] [Main:50] Se eliminó el empleado Rodrigo
+[2022-03-12 08:42:20] [ DEBUG] [Main:47] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 08:42:20] [ INFO ] [Main:52] Se eliminó el empleado Pablo
+[2022-03-12 08:42:20] [ ERROR] [Main:60] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = Rodrigo;
+ [42122-210]
+[2022-03-12 08:43:38] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 08:43:59] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 08:43:59] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 08:45:58] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 08:45:58] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 08:45:58] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = Rodrigo;
+ [42122-210]
+[2022-03-12 08:47:18] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado RODRIGO
+[2022-03-12 08:47:18] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 08:47:18] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = RODRIGO;
+ [42122-210]
+[2022-03-12 08:47:47] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado RODRIGO
+[2022-03-12 08:47:47] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 08:47:47] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = RODRIGO;
+ [42122-210]
+[2022-03-12 09:13:05] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 09:13:05] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 09:13:05] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = rodrigo;
+ [42122-210]
+[2022-03-12 09:16:35] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 09:16:35] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 09:16:35] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = Rodrigo;
+ [42122-210]
+[2022-03-12 09:18:25] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 09:18:25] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 09:18:25] [ INFO ] [Main:58] Se eliminó el empleado Rodrigo
+[2022-03-12 09:21:35] [ DEBUG] [Main:48] Se actualizaron datos de la edad en el empleado Rodrigo
+[2022-03-12 09:21:36] [ INFO ] [Main:53] Se eliminó el empleado Pablo
+[2022-03-12 09:21:36] [ ERROR] [Main:61] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "RODRIGO" no encontrada
+Column "RODRIGO" not found; SQL statement:
+DELETE FROM BUISNESS WHERE NAME = Rodrigo;
+ [42122-210]

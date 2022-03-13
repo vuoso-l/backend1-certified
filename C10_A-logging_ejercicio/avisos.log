@@ -1,0 +1,35 @@
+[2022-03-09 08:56:47] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 08:56:47] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:05:08] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:05:08] [ INFO ] [Lion:39] The lion Lion 1 is 12 years old.
+[2022-03-09 09:05:08] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:05:22] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:05:22] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:06:24] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:06:24] [ INFO ] [Lion:41] The lion Lion 1 is 0 years old.
+[2022-03-09 09:06:24] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:07:41] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:07:41] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:08:15] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:08:15] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:16:50] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:16:50] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:16:50] [ INFO ] [Tiger:49] The Tiger Tiger 1 is 12 years old and is an alfa tiger.
+[2022-03-09 09:17:47] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:17:47] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:17:47] [ INFO ] [Tiger:51] The Tiger Tiger 1 is 12 years old and isn´t an alfa tiger.
+[2022-03-09 09:19:47] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 09:19:47] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 09:19:47] [ INFO ] [Tiger:51] The Tiger Tiger 1 is 12 years old and isn´t an alfa tiger.
+[2022-03-09 15:28:41] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 15:28:41] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 15:28:41] [ INFO ] [Tiger:51] The Tiger Tiger 1 is 12 years old and isn´t an alfa tiger.
+[2022-03-09 15:31:28] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 15:31:28] [ INFO ] [Tiger:43] The lion Tiger 1 is running.
+[2022-03-09 15:31:28] [ INFO ] [Tiger:51] The Tiger Tiger 1 is 12 years old and isn´t an alfa tiger.
+[2022-03-09 15:39:42] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 15:39:42] [ ERROR] [Lion:43] The age of the lion Lion 1 isn´t correct
+[2022-03-09 15:39:42] [ INFO ] [Tiger:43] The tiger Tiger 1 is running.
+[2022-03-09 15:39:42] [ INFO ] [Tiger:51] The Tiger Tiger 1 is 12 years old and isn´t an alfa tiger.
+[2022-03-09 16:11:53] [ INFO ] [Lion:33] The lion Lion 1 is running.
+[2022-03-09 16:11:53] [ ERROR] [Lion:18] java.lang.Exception: The age of the lion Lion 1 isn´t correct
