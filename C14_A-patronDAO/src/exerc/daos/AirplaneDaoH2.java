@@ -1,6 +1,7 @@
 package exerc.daos;
 
 import exerc.entities.Airplane;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +12,7 @@ import java.util.List;
 import static exerc.config.DbH2.getConnection;
 
 public class AirplaneDaoH2 implements IDao<Airplane> {
+    private static final Logger logger = Logger.getLogger(AirplaneDaoH2.class);
 
     public AirplaneDaoH2() {
     }
@@ -34,9 +36,12 @@ public class AirplaneDaoH2 implements IDao<Airplane> {
 
             //Execute a SQL sentence
             preparedStatement.executeUpdate();
+            logger.info("Se registró el avión con id " + airplane.getId() + ", marca " + airplane.getBrand() + " y modelo " + airplane.getModel() + " satisfactoriamente");
+
             preparedStatement.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e);
         }
         return airplane;
     }
@@ -53,9 +58,12 @@ public class AirplaneDaoH2 implements IDao<Airplane> {
 
             //Execute a SQL sentence
             preparedStatement.executeUpdate();
+            logger.info("Se eliminó el avión con id " + id + " satisfactoriamente");
+
             preparedStatement.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e);
         }
     }
 
@@ -83,10 +91,13 @@ public class AirplaneDaoH2 implements IDao<Airplane> {
                 airplane1 = new Airplane(idAirplane, brand, model, license, startService);
             }
 
+            logger.info("Se realizó satisfactoriamente la búsqueda del avión con id " + airplane1.getId() + ": marca " + airplane1.getBrand() + " - modelo " + airplane1.getModel() + " - fecha inicio en servicio " + airplane1.getStartService());
+
             preparedStatement.close();
 
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e);
         }
         return airplane1;
     }
@@ -112,12 +123,14 @@ public class AirplaneDaoH2 implements IDao<Airplane> {
                 String license = result.getString("license");
                 String startService = result.getString("startService");
                 airplanes.add(new Airplane(idAirplane, brand, model, license, startService));
+                logger.info("* Avión * id: " + idAirplane + " - marca: " + brand + " - modelo: " + model + " - licencia: " + license + " - fecha inicio en servicio: " + startService);
             }
 
             preparedStatement.close();
 
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e);
         }
         return airplanes;
     }
