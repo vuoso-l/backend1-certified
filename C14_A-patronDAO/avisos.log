@@ -32,3 +32,10 @@ INSERT INTO airplane VALUES(?, ?, ?, ?, ?) [23505-210]
 [2022-03-13 11:03:34] [ ERROR] [AirplaneDaoH2:44] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(2 AS BIGINT), 'bbb', 'b1', 'b1-789', '01/03/2022')"
 Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(2 AS BIGINT), 'bbb', 'b1', 'b1-789', '01/03/2022')"; SQL statement:
 INSERT INTO airplane VALUES(?, ?, ?, ?, ?) [23505-210]
+[2022-03-14 08:16:41] [ ERROR] [AirplaneDaoH2:44] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(1 AS BIGINT), 'aaa', 'a1', 'a1-789', '01/03/2022')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(1 AS BIGINT), 'aaa', 'a1', 'a1-789', '01/03/2022')"; SQL statement:
+INSERT INTO airplane VALUES(?, ?, ?, ?, ?) [23505-210]
+[2022-03-14 08:16:41] [ ERROR] [AirplaneDaoH2:44] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(2 AS BIGINT), 'bbb', 'b1', 'b1-789', '01/03/2022')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.AIRPLANE(ID) ( /* key:0 */ CAST(2 AS BIGINT), 'bbb', 'b1', 'b1-789', '01/03/2022')"; SQL statement:
+INSERT INTO airplane VALUES(?, ?, ?, ?, ?) [23505-210]
+[2022-03-14 08:16:41] [ INFO ] [AirplaneDaoH2:94] Se realizó satisfactoriamente la búsqueda del avión con id 1: marca aaa - modelo a1 - fecha inicio en servicio 01/03/2022
