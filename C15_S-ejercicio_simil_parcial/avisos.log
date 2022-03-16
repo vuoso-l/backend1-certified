@@ -1,0 +1,175 @@
+[2022-03-15 18:44:39] [ ERROR] [PatientDaoH2:47] java.lang.NullPointerException
+[2022-03-15 18:57:53] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLDataException: Serialización fallida, causa: "java.io.NotSerializableException: exerc.models.Address"
+Serialization failed, cause: "java.io.NotSerializableException: exerc.models.Address" [90026-210]
+[2022-03-15 18:57:53] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+INSERT INTO patient VALUES(DEFAULT, ?, ?, ?, ?) [21002-210]
+[2022-03-15 18:58:05] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLDataException: Serialización fallida, causa: "java.io.NotSerializableException: exerc.models.Address"
+Serialization failed, cause: "java.io.NotSerializableException: exerc.models.Address" [90026-210]
+[2022-03-15 18:58:05] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+INSERT INTO patient VALUES(DEFAULT, ?, ?, ?, ?) [21002-210]
+[2022-03-15 18:59:28] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-15 18:59:28] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-15 18:59:49] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLDataException: Serialización fallida, causa: "java.io.NotSerializableException: exerc.models.Address"
+Serialization failed, cause: "java.io.NotSerializableException: exerc.models.Address" [90026-210]
+[2022-03-15 18:59:49] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLDataException: Valor Invalido "5" para el parametro "parameterIndex"
+Invalid value "5" for parameter "parameterIndex" [90008-210]
+[2022-03-15 19:04:50] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLDataException: Serialización fallida, causa: "java.io.NotSerializableException: exerc.models.Address"
+Serialization failed, cause: "java.io.NotSerializableException: exerc.models.Address" [90026-210]
+[2022-03-15 19:04:50] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-15 19:06:20] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "ADMISSIONDATE" no encontrada
+Column "ADMISSIONDATE" not found; SQL statement:
+INSERT INTO patient (lastname, firstname, dni, admissionDate, address) VALUES(?, ?, ?, ?, ?) [42122-210]
+[2022-03-15 19:06:20] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-15 19:09:12] [ ERROR] [PatientDaoH2:47] org.h2.jdbc.JdbcSQLDataException: Serialización fallida, causa: "java.io.NotSerializableException: exerc.models.Address"
+Serialization failed, cause: "java.io.NotSerializableException: exerc.models.Address" [90026-210]
+[2022-03-15 19:09:12] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 10:26:57] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 10:26:57] [ ERROR] [PatientDaoH2:53] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "ADDRESS" no encontrada
+Column "ADDRESS" not found; SQL statement:
+INSERT INTO patient (lastname, firstname, dni, admissionDate, address) VALUES(?, ?, ?, ?, ?) [42122-210]
+[2022-03-16 10:26:57] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 10:29:17] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 13:58:02] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:07:36] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:07:36] [ ERROR] [PatientDaoH2:53] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:07:36] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:08:18] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:08:18] [ INFO ] [PatientDaoH2:48] Se creó el paciente aaa, bbb
+[2022-03-16 14:08:18] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:11:58] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:11:58] [ ERROR] [PatientDaoH2:53] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:11:58] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:12:13] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:12:13] [ INFO ] [PatientDaoH2:48] Se creó el paciente aaa, bbb
+[2022-03-16 14:12:13] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:13:37] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:13:38] [ ERROR] [PatientDaoH2:53] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:13:38] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:13:53] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:13:53] [ INFO ] [PatientDaoH2:48] Se creó el paciente aaa, bbb
+[2022-03-16 14:13:53] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:15:12] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:15:12] [ INFO ] [PatientDaoH2:48] Se creó el paciente aaa, bbb
+[2022-03-16 14:15:12] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:48] Se creó el paciente aaa, bbb
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:48] Se creó el paciente bbb, bbb
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:41] Se creó la dirección ttt
+[2022-03-16 14:17:46] [ INFO ] [PatientDaoH2:41] Se creó la dirección www
+[2022-03-16 14:21:57] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:21:57] [ ERROR] [PatientDaoH2:53] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:21:57] [ ERROR] [PatientDaoH2:46] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 14:22:16] [ INFO ] [PatientDaoH2:41] Se creó la dirección bolivar
+[2022-03-16 14:22:16] [ INFO ] [PatientDaoH2:48] Se creó el paciente vuoso, bbb
+[2022-03-16 14:22:16] [ INFO ] [PatientDaoH2:41] Se creó la dirección bolivar
+[2022-03-16 14:30:39] [ INFO ] [PatientDaoH2:41] Se creó la dirección con id 0----aya
+[2022-03-16 14:30:39] [ INFO ] [PatientDaoH2:48] Se creó el paciente null----lucas, bbb
+[2022-03-16 14:30:39] [ INFO ] [PatientDaoH2:41] Se creó la dirección con id 0----aya
+[2022-03-16 14:40:13] [ INFO ] [PatientDaoH2:41] Se creó la dirección con id 0----aya
+[2022-03-16 14:40:13] [ INFO ] [PatientDaoH2:48] Se creó el paciente null----lucas, bbb
+[2022-03-16 14:40:14] [ INFO ] [PatientDaoH2:108] Se realizó satisfactoriamente la búsqueda del paciente con id null: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 14:40:14] [ INFO ] [PatientDaoH2:41] Se creó la dirección con id 0----aya
+[2022-03-16 15:00:10] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 26----aya
+[2022-03-16 15:00:10] [ INFO ] [PatientDaoH2:52] Se creó el paciente 10----lucas, bbb
+[2022-03-16 15:00:10] [ INFO ] [PatientDaoH2:112] Se realizó satisfactoriamente la búsqueda del paciente con id null: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:00:10] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 27----aya
+[2022-03-16 15:07:07] [ INFO ] [PatientDaoH2:75] Se eliminó el paciente con id 7 satisfactoriamente
+[2022-03-16 15:07:51] [ ERROR] [PatientDaoH2:155] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 1: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 2: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 3: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 4: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 5: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 6: apellido bbb, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 8: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 9: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:08:10] [ INFO ] [PatientDaoH2:148] * Paciente * id 10: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:11:13] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:12:14] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id www
+[2022-03-16 15:13:54] [ INFO ] [PatientDaoH2:68] Se eliminó el domicilio con id 19 satisfactoriamente
+[2022-03-16 15:14:20] [ ERROR] [PatientDaoH2:144] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "street" no encontrada
+Column "street" not found [42122-210]
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 1: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 2: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 3: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 4: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 5: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 6: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 7: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 8: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 9: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 10: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 11: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 12: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 13: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 14: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 15: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 16: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 17: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 18: calle ttt, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 20: calle bolivar, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 21: calle bolivar, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 22: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 23: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 24: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 25: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 26: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:18:43] [ INFO ] [PatientDaoH2:137] * Dommicilio * id 27: calle aya, número 123 - localidad www - provincia eee
+[2022-03-16 15:22:59] [ INFO ] [PatientDaoH2:112] Se realizó satisfactoriamente la búsqueda del paciente con id null: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:20] [ INFO ] [PatientDaoH2:148] * Paciente * id 1: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:20] [ INFO ] [PatientDaoH2:148] * Paciente * id 2: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:20] [ INFO ] [PatientDaoH2:148] * Paciente * id 3: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:20] [ INFO ] [PatientDaoH2:148] * Paciente * id 4: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:148] * Paciente * id 5: apellido aaa, nombre bbb - dni 123456789
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:148] * Paciente * id 6: apellido bbb, nombre bbb - dni 123456789
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:148] * Paciente * id 8: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:148] * Paciente * id 9: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:24:21] [ INFO ] [PatientDaoH2:148] * Paciente * id 10: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:30:29] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 28----aya
+[2022-03-16 15:30:29] [ INFO ] [PatientDaoH2:52] Se creó el paciente 11----lucas, bbb
+[2022-03-16 15:30:29] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 29----aya
+[2022-03-16 15:32:39] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 30----bol
+[2022-03-16 15:32:39] [ INFO ] [PatientDaoH2:52] Se creó el paciente 12----vuoso, bbb
+[2022-03-16 15:32:39] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 31----bol
+[2022-03-16 15:33:07] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:33:07] [ INFO ] [PatientDaoH2:112] Se realizó satisfactoriamente la búsqueda del paciente con id null: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-16 15:35:35] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:35:35] [ INFO ] [PatientDaoH2:148] * Paciente * id 11: apellido lucas, nombre bbb - dni 123456789
+[2022-03-16 15:35:35] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:35:35] [ INFO ] [PatientDaoH2:148] * Paciente * id 12: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-16 15:36:39] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:36:39] [ INFO ] [PatientDaoH2:110] Se realizó satisfactoriamente la búsqueda del paciente con id null: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-16 15:37:54] [ INFO ] [PatientDaoH2:103] Se realizó satisfactoriamente la búsqueda del domicilio con id 0
+[2022-03-16 15:37:54] [ INFO ] [PatientDaoH2:110] Se realizó satisfactoriamente la búsqueda del paciente con id 12: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-16 15:38:22] [ INFO ] [PatientDaoH2:101] Se realizó satisfactoriamente la búsqueda del domicilio con id 30
+[2022-03-16 15:38:22] [ INFO ] [PatientDaoH2:110] Se realizó satisfactoriamente la búsqueda del paciente con id 12: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-16 17:20:18] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 32----bol
+[2022-03-16 17:20:18] [ INFO ] [PatientDaoH2:52] Se creó el paciente 1----vuoso, bbb
+[2022-03-16 17:28:51] [ ERROR] [PatientDaoH2:50] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 17:28:51] [ ERROR] [PatientDaoH2:58] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-16 17:29:07] [ INFO ] [PatientDaoH2:45] Se creó la dirección con id 33----bol
+[2022-03-16 17:29:07] [ INFO ] [PatientDaoH2:53] Se creó el paciente 2----vuoso, bbb
+[2022-03-16 17:35:07] [ INFO ] [PatientDaoH2:101] Se realizó satisfactoriamente la búsqueda del domicilio con id 32
+[2022-03-16 17:35:07] [ INFO ] [PatientDaoH2:111] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido vuoso, nombre bbb - dni 123456789

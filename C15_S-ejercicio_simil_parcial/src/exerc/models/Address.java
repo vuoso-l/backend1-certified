@@ -1,6 +1,7 @@
 package exerc.models;
 
 public class Address {
+    private int id;
     private String street;
     private int number;
     private String locality;
@@ -11,6 +12,14 @@ public class Address {
         this.number = number;
         this.locality = locality;
         this.province = province;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getStreet() {
