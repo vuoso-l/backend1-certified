@@ -1,0 +1,3 @@
+[2022-03-14 09:20:29] [ ERROR] [AirplaneDaoH2:44] java.lang.ClassNotFoundException: org.h2.Driver
+[2022-03-14 09:20:29] [ ERROR] [AirplaneDaoH2:44] java.lang.ClassNotFoundException: org.h2.Driver
+[2022-03-14 09:20:29] [ ERROR] [AirplaneDaoH2:133] java.lang.ClassNotFoundException: org.h2.Driver
