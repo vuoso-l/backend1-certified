@@ -1,0 +1,43 @@
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 1. Sus datos son: * matrícula n° * 123456789, * nombre * Lucas y * apellido * Vuoso
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 2. Sus datos son: * matrícula n° * 147258369, * nombre * Juan y * apellido * García
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 3. Sus datos son: * matrícula n° * 987654321, * nombre * Carlos y * apellido * Pérez
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 4. Sus datos son: * matrícula n° * 963258741, * nombre * Mabel y * apellido * Gómez
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 1: nombre Lucas, apellido Vuoso - matrícula n° 123456789
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 2: nombre Juan, apellido García - matrícula n° 147258369
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 3: nombre Carlos, apellido Pérez - matrícula n° 987654321
+[2022-03-17 14:27:03] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 4: nombre Mabel, apellido Gómez - matrícula n° 963258741
+[2022-03-17 14:41:24] [ ERROR] [OdontologoDaoH2:41] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:41:24] [ ERROR] [OdontologoDaoH2:41] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:41:24] [ ERROR] [OdontologoDaoH2:41] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:41:24] [ ERROR] [OdontologoDaoH2:41] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:41:24] [ ERROR] [OdontologoDaoH2:78] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 5. Sus datos son: * matrícula n° * 123456789, * nombre * Lucas y * apellido * Vuoso
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 6. Sus datos son: * matrícula n° * 147258369, * nombre * Juan y * apellido * García
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 7. Sus datos son: * matrícula n° * 987654321, * nombre * Carlos y * apellido * Pérez
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 8. Sus datos son: * matrícula n° * 963258741, * nombre * Mabel y * apellido * Gómez
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 1: nombre Lucas, apellido Vuoso - matrícula n° 123456789
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 2: nombre Juan, apellido García - matrícula n° 147258369
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 3: nombre Carlos, apellido Pérez - matrícula n° 987654321
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 4: nombre Mabel, apellido Gómez - matrícula n° 963258741
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 5: nombre Lucas, apellido Vuoso - matrícula n° 123456789
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 6: nombre Juan, apellido García - matrícula n° 147258369
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 7: nombre Carlos, apellido Pérez - matrícula n° 987654321
+[2022-03-17 14:41:43] [ INFO ] [OdontologoDaoH2:71] * Odontólogo * con id 8: nombre Mabel, apellido Gómez - matrícula n° 963258741
+[2022-03-17 14:51:11] [ INFO ] [OdontologoDaoH2:67] Se realizó la búsqueda del odontólogo con id 1 satisfactoriamente. Sus datos son: nombre Lucas - apellido Vuoso - matrícula n° 123456789
+[2022-03-17 14:57:26] [ ERROR] [OdontologoDaoH2:63] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:57:40] [ INFO ] [OdontologoDaoH2:58] Se eliminó el odontólogo con id 8 satisfactoriamente
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 1. Sus datos son: * matrícula n° * 123456789, * nombre * Lucas y * apellido * Vuoso
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 2. Sus datos son: * matrícula n° * 147258369, * nombre * Juan y * apellido * García
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 3. Sus datos son: * matrícula n° * 987654321, * nombre * Carlos y * apellido * Pérez
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:36] Se creó el odontólogo 4. Sus datos son: * matrícula n° * 963258741, * nombre * Mabel y * apellido * Gómez
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:90] Se realizó la búsqueda del odontólogo con id 1 satisfactoriamente. Sus datos son -- nombre: Lucas - apellido: Vuoso - matrícula n°: 123456789
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:124] * Odontólogo * con id 1// nombre: Lucas - apellido: Vuoso - matrícula n°: 123456789
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:124] * Odontólogo * con id 2// nombre: Juan - apellido: García - matrícula n°: 147258369
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:124] * Odontólogo * con id 3// nombre: Carlos - apellido: Pérez - matrícula n°: 987654321
+[2022-03-17 15:09:51] [ INFO ] [OdontologoDaoH2:124] * Odontólogo * con id 4// nombre: Mabel - apellido: Gómez - matrícula n°: 963258741
