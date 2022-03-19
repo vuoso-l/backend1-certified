@@ -1,8 +1,9 @@
-package maven.servicies;
+package servicies;
 
 import maven.daos.AirplaneDaoH2;
 import maven.daos.IDao;
 import maven.entities.Airplane;
+import maven.servicies.AirplaneService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

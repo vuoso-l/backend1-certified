@@ -173,3 +173,6 @@ Database may be already in use: null. Possible solutions: close all other connec
 [2022-03-16 17:29:07] [ INFO ] [PatientDaoH2:53] Se creó el paciente 2----vuoso, bbb
 [2022-03-16 17:35:07] [ INFO ] [PatientDaoH2:101] Se realizó satisfactoriamente la búsqueda del domicilio con id 32
 [2022-03-16 17:35:07] [ INFO ] [PatientDaoH2:111] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido vuoso, nombre bbb - dni 123456789
+[2022-03-17 06:48:25] [ ERROR] [PatientDaoH2:181] org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE PATIENT SET [*]= ? WHERE ID = ?"; se esperaba "identifier"
+Syntax error in SQL statement "UPDATE PATIENT SET [*]= ? WHERE ID = ?"; expected "identifier"; SQL statement:
+UPDATE PATIENT SET = ? WHERE ID = ? [42001-210]
