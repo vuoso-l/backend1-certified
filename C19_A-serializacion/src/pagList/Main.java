@@ -11,7 +11,7 @@ public class Main {
         WebPage web3 = new WebPage("www.hello.com", "Hello");
         WebPage web4 = new WebPage("www.bye.com", "Bye");
 
-        List<WebPage> favoriteWebPages = new ArrayList<WebPage>();
+        List<WebPage> favoriteWebPages = new ArrayList<>();
 
         favoriteWebPages.add(web1);
         favoriteWebPages.add(web2);
@@ -25,19 +25,28 @@ public class Main {
             oos.writeObject(favoriteWebPages);
             oos.close();
 
-            FileInputStream fis = new FileInputStream("favoriteWebPages.txt");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
-            ois.readObject();
-            System.out.println(favoriteWebPages);
-            ois.close();
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        }
+
+        try {
+            FileInputStream fis = new FileInputStream("favoriteWebPages.txt");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            ArrayList<WebPage> webPageArrayList = (ArrayList<WebPage>) ois.readObject();
+
+            for (WebPage wp : webPageArrayList) {
+                System.out.println(wp);
+            }
+            ois.close();
+        } catch (FileNotFoundException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
 }
