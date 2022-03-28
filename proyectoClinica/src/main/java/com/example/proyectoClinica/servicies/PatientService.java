@@ -31,6 +31,10 @@ public class PatientService {
         patientDao.delete(id);
     }
 
+    public Patient findOneById(Long id) {
+        return patientDao.findOneById(id);
+    }
+
     public Patient findOneByEmail(String email) {
         return patientDao.findOneByEmail(email);
     }

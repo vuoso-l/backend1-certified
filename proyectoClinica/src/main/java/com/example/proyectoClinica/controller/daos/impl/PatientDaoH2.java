@@ -90,7 +90,43 @@ public class PatientDaoH2 implements IDao<Patient> {
 
     @Override
     public Patient findOneById(Long id) {
-        return null;
+        Patient patient1 = null;
+        try {
+            //Conexion to the DB
+            connection = getConnection();
+
+            //Create sentence
+            preparedStatement = connection.prepareStatement("SELECT * FROM patient WHERE id = ?");
+            preparedStatement.setLong(1, id);
+
+            //Execute a SQL sentence
+            ResultSet result = preparedStatement.executeQuery();
+
+            //Obtain results
+            while (result.next()) {
+                Long idPatient = result.getLong("id");
+                String lastname = result.getString("lastname");
+                String firstname = result.getString("firstname");
+                String email = result.getString("email");
+                int dni = result.getInt("dni");
+                Date admissionDate = result.getDate("admissionDate");
+                Long idAddress = result.getLong("id_address");
+                Long idDentist = result.getLong("id_dentist");
+                Address address = addressDaoH2.findOneById(idAddress);
+                Dentist dentist = dentistDaoH2.findOneById(idDentist);
+                patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address, dentist);
+                logger.info("Se realizó satisfactoriamente la búsqueda del paciente con id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
+            }
+
+            preparedStatement.close();
+
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+            logger.error(throwables);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return patient1;
     }
 
     @Override
