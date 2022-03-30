@@ -1,6 +1,6 @@
-package com.example.proyectoClinica.controller.daos.impl;
+package com.example.proyectoClinica.repository.daos.impl;
 
-import com.example.proyectoClinica.controller.daos.IDao;
+import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Dentist;
 import com.example.proyectoClinica.domain.DentistShift;
 import com.example.proyectoClinica.domain.Patient;
@@ -160,5 +160,34 @@ public class DentistShiftDaoH2 implements IDao<DentistShift> {
             e.printStackTrace();
         }
         return dentistShifts;
+    }
+
+    @Override
+    public DentistShift update(DentistShift dentistShift) {
+        try {
+            //Como primer paso actualizamos el domicilio del paciente
+            Patient patient1 = patientDaoH2.update(dentistShift.getPatient());
+            Dentist dentist1 = dentistDaoH2.update(dentistShift.getDentist());
+
+            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            preparedStatement = connection.prepareStatement("UPDATE patient SET date = ?, id_patient = ?, id_dentist = ? WHERE id = ?");
+            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
+            preparedStatement.setDate(1, Util.utilDateToSqlDate(dentistShift.getDate()));
+            preparedStatement.setLong(2, dentistShift.getPatient().getId());
+            preparedStatement.setLong(3, dentistShift.getDentist().getId());
+            preparedStatement.setLong(8, dentistShift.getId());
+
+            //3 Ejecutar una sentencia SQL
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            logger.error(throwables);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dentistShift;
     }
 }

@@ -1,6 +1,6 @@
 package com.example.proyectoClinica.servicies;
 
-import com.example.proyectoClinica.controller.daos.IDao;
+import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Address;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +37,9 @@ public class AddressService {
 
     public List<Address> findAll() {
         return addressDao.findAll();
+    }
+
+    public Address updateAddress(Address address) {
+        return addressDao.update(address);
     }
 }

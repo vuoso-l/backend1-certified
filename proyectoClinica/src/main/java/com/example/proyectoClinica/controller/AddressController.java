@@ -1,6 +1,6 @@
 package com.example.proyectoClinica.controller;
 
-import com.example.proyectoClinica.controller.daos.impl.AddressDaoH2;
+import com.example.proyectoClinica.repository.daos.impl.AddressDaoH2;
 import com.example.proyectoClinica.domain.Address;
 import com.example.proyectoClinica.servicies.AddressService;
 import org.springframework.http.HttpStatus;
@@ -14,14 +14,6 @@ import java.util.List;
 public class AddressController {
 
     private AddressService addressService = new AddressService(new AddressDaoH2());
-
-
-    /*@GetMapping("/addressIndex")
-    public String welcome(Model model){
-        addressService.setAddressDao(new AddressDaoH2());
-        model.addAttribute("street",addressService.findOneById(1L).getStreet());
-        return "addressIndex";
-    }*/
 
     @PostMapping("/register")
     public ResponseEntity<Address> addressRegister(@RequestBody Address address) throws Exception {
@@ -48,6 +40,18 @@ public class AddressController {
     @GetMapping("/all")
     public List<Address> findAllAddresses() {
         return addressService.findAll();
+    }
+
+    @PutMapping()
+    public ResponseEntity<Address> updateAddress(@RequestBody Address address) {
+        ResponseEntity<Address> response = null;
+
+        if (address.getId() != null && addressService.findOneById(address.getId()) != null)
+            response = ResponseEntity.ok(addressService.updateAddress(address));
+        else
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        return response;
     }
 
 }

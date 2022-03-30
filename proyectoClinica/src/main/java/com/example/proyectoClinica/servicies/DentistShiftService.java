@@ -1,6 +1,6 @@
 package com.example.proyectoClinica.servicies;
 
-import com.example.proyectoClinica.controller.daos.IDao;
+import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.DentistShift;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +37,9 @@ public class DentistShiftService {
 
     public List<DentistShift> findAll() {
         return dentistShiftDao.findAll();
+    }
+
+    public DentistShift updateDentistShift(DentistShift dentistShift) {
+        return dentistShiftDao.update(dentistShift);
     }
 }

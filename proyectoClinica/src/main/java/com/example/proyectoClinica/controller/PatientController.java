@@ -1,7 +1,6 @@
 package com.example.proyectoClinica.controller;
 
-import com.example.proyectoClinica.controller.daos.impl.PatientDaoH2;
-import com.example.proyectoClinica.domain.Address;
+import com.example.proyectoClinica.repository.daos.impl.PatientDaoH2;
 import com.example.proyectoClinica.domain.Patient;
 import com.example.proyectoClinica.servicies.PatientService;
 import org.springframework.http.HttpStatus;
@@ -40,6 +39,18 @@ public class PatientController {
     @GetMapping()
     public List<Patient> findAllPatients() {
         return patientService.findAll();
+    }
+
+    @PutMapping()
+    public ResponseEntity<Patient> updatePatient(@RequestBody Patient patient) {
+        ResponseEntity<Patient> response = null;
+
+        if (patient.getId() != null && patientService.findOneById(patient.getId()) != null)
+            response = ResponseEntity.ok(patientService.updatePatient(patient));
+        else
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        return response;
     }
 
 }

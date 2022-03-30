@@ -1,7 +1,6 @@
 package com.example.proyectoClinica.controller;
 
-import com.example.proyectoClinica.controller.daos.impl.DentistShiftDaoH2;
-import com.example.proyectoClinica.domain.Dentist;
+import com.example.proyectoClinica.repository.daos.impl.DentistShiftDaoH2;
 import com.example.proyectoClinica.domain.DentistShift;
 import com.example.proyectoClinica.servicies.DentistShiftService;
 import org.springframework.http.HttpStatus;
@@ -40,6 +39,18 @@ public class DentistShiftController {
     @GetMapping()
     public List<DentistShift> findAllDentistShifts() {
         return dentistShiftService.findAll();
+    }
+
+    @PutMapping()
+    public ResponseEntity<DentistShift> updateDentistShift(@RequestBody DentistShift dentistShift) {
+        ResponseEntity<DentistShift> response = null;
+
+        if (dentistShift.getId() != null && dentistShiftService.findOneById(dentistShift.getId()) != null)
+            response = ResponseEntity.ok(dentistShiftService.updateDentistShift(dentistShift));
+        else
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        return response;
     }
 
 }

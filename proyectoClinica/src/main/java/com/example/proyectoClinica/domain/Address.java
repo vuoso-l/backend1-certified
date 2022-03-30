@@ -1,7 +1,7 @@
 package com.example.proyectoClinica.domain;
 
 public class Address {
-    private int id;
+    private Long id;
     private String street;
     private String locality;
     private int number;
@@ -14,11 +14,11 @@ public class Address {
         this.province = province;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

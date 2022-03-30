@@ -1,6 +1,6 @@
-package com.example.proyectoClinica.controller.daos.impl;
+package com.example.proyectoClinica.repository.daos.impl;
 
-import com.example.proyectoClinica.controller.daos.IDao;
+import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Address;
 import org.apache.log4j.Logger;
 
@@ -11,6 +11,7 @@ import java.util.List;
 import static com.example.proyectoClinica.config.DbH2.getConnection;
 
 public class AddressDaoH2 implements IDao<Address> {
+
     private static final Logger logger = Logger.getLogger(PatientDaoH2.class);
 
     public AddressDaoH2() {
@@ -36,7 +37,7 @@ public class AddressDaoH2 implements IDao<Address> {
             preparedStatement.executeUpdate();
             ResultSet keys = preparedStatement.getGeneratedKeys();
             if(keys.next())
-                address.setId(keys.getInt(1));
+                address.setId(keys.getLong(1));
 
             logger.info("Se creó la dirección con id " + address.getId() + "----" + address.getStreet());
 
@@ -87,12 +88,13 @@ public class AddressDaoH2 implements IDao<Address> {
 
             //Obtain results
             while (result.next()) {
-                int idAddress = result.getInt("id");
+                Long idAddress = result.getLong("id");
                 String street = result.getString("street");
                 int number = result.getInt("number");
                 String locality = result.getString("locality");
                 String province = result.getString("province");
                 address1 = new Address(street, locality, number, province);
+                address1.setId(idAddress);
                 logger.info("Se realizó satisfactoriamente la búsqueda del domicilio con id " + idAddress);
             }
 
@@ -145,5 +147,31 @@ public class AddressDaoH2 implements IDao<Address> {
             e.printStackTrace();
         }
         return addresses;
+    }
+
+    @Override
+    public Address update(Address address) {
+        try {
+            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            preparedStatement = connection.prepareStatement("UPDATE address SET street = ?, number = ?, locality = ?, province = ? WHERE id = ?");
+            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
+            preparedStatement.setString(1, address.getStreet());
+            preparedStatement.setInt(2, address.getNumber());
+            preparedStatement.setString(3, address.getLocality());
+            preparedStatement.setString(4, address.getProvince());
+            preparedStatement.setLong(5, address.getId());
+
+            //3 Ejecutar una sentencia SQL
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            logger.error(throwables);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return address;
     }
 }

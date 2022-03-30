@@ -1,6 +1,6 @@
-package com.example.proyectoClinica.controller.daos.impl;
+package com.example.proyectoClinica.repository.daos.impl;
 
-import com.example.proyectoClinica.controller.daos.IDao;
+import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Address;
 import com.example.proyectoClinica.domain.Dentist;
 import com.example.proyectoClinica.domain.Patient;
@@ -208,5 +208,38 @@ public class PatientDaoH2 implements IDao<Patient> {
             e.printStackTrace();
         }
         return patients;
+    }
+
+    @Override
+    public Patient update(Patient patient) {
+        try {
+            //Como primer paso actualizamos el domicilio del paciente
+            Address address1 = addressDaoH2.update(patient.getAddress());
+            Dentist dentist1 = dentistDaoH2.update(patient.getDentist());
+
+            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            preparedStatement = connection.prepareStatement("UPDATE patient SET lastname = ?, firstname = ?, email = ?, dni = ?, admissionDate = ?, id_address = ?, id_dentist = ?  WHERE id = ?");
+            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
+            preparedStatement.setString(1, patient.getLastName());
+            preparedStatement.setString(2, patient.getFirstName());
+            preparedStatement.setString(3, patient.getEmail());
+            preparedStatement.setInt(4, patient.getDni());
+            preparedStatement.setDate(5, Util.utilDateToSqlDate(patient.getAdmissionDate()));
+            preparedStatement.setLong(6, patient.getAddress().getId());
+            preparedStatement.setLong(7, patient.getDentist().getId());
+            preparedStatement.setLong(8, patient.getId());
+
+            //3 Ejecutar una sentencia SQL
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            logger.error(throwables);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return patient;
     }
 }

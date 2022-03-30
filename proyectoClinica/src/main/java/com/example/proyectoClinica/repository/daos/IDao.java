@@ -1,4 +1,4 @@
-package com.example.proyectoClinica.controller.daos;
+package com.example.proyectoClinica.repository.daos;
 
 import java.util.List;
 
@@ -12,4 +12,6 @@ public interface IDao<T> {
     public T findOneByEmail(String email);
 
     public List<T> findAll();
+
+    public T update(T t);
 }
