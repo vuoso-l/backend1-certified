@@ -16,7 +16,6 @@ import static com.example.proyectoClinica.config.DbH2.getConnection;
 public class PatientDaoH2 implements IDao<Patient> {
     private static final Logger logger = Logger.getLogger(PatientDaoH2.class);
     private final AddressDaoH2 addressDaoH2 = new AddressDaoH2();
-    private final DentistDaoH2 dentistDaoH2 = new DentistDaoH2();
 
     public PatientDaoH2() {
     }
@@ -32,22 +31,19 @@ public class PatientDaoH2 implements IDao<Patient> {
             //ya que necesitamos el ID del domicilio que se generará en la base de datos para luego
             //insertar ese id en el campo domicilio_id de la tabla pacientes
             Address address = addressDaoH2.register(patient.getAddress());
-            Dentist dentist = dentistDaoH2.register(patient.getDentist());
             patient.getAddress().setId(address.getId());
-            patient.getDentist().setId(dentist.getId());
 
             //Conexion to the DB
             connection = getConnection();
 
             //Create sentence
-            preparedStatement = connection.prepareStatement("INSERT INTO patient (lastname, firstname, email, dni, admissionDate, id_address, id_dentist) VALUES(?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement = connection.prepareStatement("INSERT INTO patient (lastname, firstname, email, dni, admissionDate, id_address) VALUES(?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, patient.getLastName());
             preparedStatement.setString(2, patient.getFirstName());
             preparedStatement.setString(3, patient.getEmail());
             preparedStatement.setLong(4, patient.getDni());
             preparedStatement.setDate(5, Util.utilDateToSqlDate(patient.getAdmissionDate()));
             preparedStatement.setLong(6, patient.getAddress().getId());
-            preparedStatement.setLong(7, patient.getDentist().getId());
 
             //Execute a SQL sentence
             preparedStatement.executeUpdate();
@@ -113,8 +109,7 @@ public class PatientDaoH2 implements IDao<Patient> {
                 Long idAddress = result.getLong("id_address");
                 Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
-                Dentist dentist = dentistDaoH2.findOneById(idDentist);
-                patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address, dentist);
+                patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address);
                 logger.info("Se realizó satisfactoriamente la búsqueda del paciente con id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
@@ -154,8 +149,7 @@ public class PatientDaoH2 implements IDao<Patient> {
                 Long idAddress = result.getLong("id_address");
                 Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
-                Dentist dentist = dentistDaoH2.findOneById(idDentist);
-                patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address, dentist);
+                patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address);
                 logger.info("Se realizó satisfactoriamente la búsqueda del paciente con id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
@@ -194,8 +188,7 @@ public class PatientDaoH2 implements IDao<Patient> {
                 Long idAddress = result.getLong("id_address");
                 Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
-                Dentist dentist = dentistDaoH2.findOneById(idDentist);
-                patients.add(new Patient(lastname, firstname, email, dni, admissionDate, address, dentist));
+                patients.add(new Patient(lastname, firstname, email, dni, admissionDate, address));
                 logger.info("* Paciente * id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
@@ -215,10 +208,9 @@ public class PatientDaoH2 implements IDao<Patient> {
         try {
             //Como primer paso actualizamos el domicilio del paciente
             Address address1 = addressDaoH2.update(patient.getAddress());
-            Dentist dentist1 = dentistDaoH2.update(patient.getDentist());
 
             //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
-            preparedStatement = connection.prepareStatement("UPDATE patient SET lastname = ?, firstname = ?, email = ?, dni = ?, admissionDate = ?, id_address = ?, id_dentist = ?  WHERE id = ?");
+            preparedStatement = connection.prepareStatement("UPDATE patient SET lastname = ?, firstname = ?, email = ?, dni = ?, admissionDate = ?, id_address = ? WHERE id = ?");
             //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
             preparedStatement.setString(1, patient.getLastName());
             preparedStatement.setString(2, patient.getFirstName());
@@ -226,7 +218,6 @@ public class PatientDaoH2 implements IDao<Patient> {
             preparedStatement.setInt(4, patient.getDni());
             preparedStatement.setDate(5, Util.utilDateToSqlDate(patient.getAdmissionDate()));
             preparedStatement.setLong(6, patient.getAddress().getId());
-            preparedStatement.setLong(7, patient.getDentist().getId());
             preparedStatement.setLong(8, patient.getId());
 
             //3 Ejecutar una sentencia SQL

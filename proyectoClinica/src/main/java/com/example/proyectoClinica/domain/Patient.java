@@ -10,16 +10,14 @@ public class Patient {
     private int dni;
     private Date admissionDate;
     private Address address;
-    private Dentist dentist;
 
-    public Patient(String lastName, String firstName, String email, int dni, Date admissionDate, Address address, Dentist dentist) {
+    public Patient(String lastName, String firstName, String email, int dni, Date admissionDate, Address address) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
         this.dni = dni;
         this.admissionDate = admissionDate;
         this.address = address;
-        this.dentist = dentist;
     }
 
     public Long getId() {
@@ -76,14 +74,6 @@ public class Patient {
 
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public Dentist getDentist() {
-        return dentist;
-    }
-
-    public void setDentist(Dentist dentist) {
-        this.dentist = dentist;
     }
 
     @Override
