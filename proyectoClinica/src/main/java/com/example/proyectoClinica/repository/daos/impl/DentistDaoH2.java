@@ -88,6 +88,7 @@ public class DentistDaoH2 implements IDao<Dentist> {
                 String firstName = result.getString("firstName");
                 String lastName = result.getString("lastName");
                 dentist1 = new Dentist(registrationNumber, firstName, lastName);
+                dentist1.setId(idDentist);
                 logger.info("Se realizó la búsqueda del odontólogo con id " + idDentist + " satisfactoriamente. Sus datos son -- nombre: " + firstName + " - apellido: " + lastName + " - matrícula n°: " + registrationNumber);
             }
 
@@ -122,12 +123,14 @@ public class DentistDaoH2 implements IDao<Dentist> {
 
             //Obtain results
             while (result.next()) {
-                Long id = result.getLong("id");
+                Long idDentist = result.getLong("id");
                 int registrationNumber = result.getInt("registrationNumber");
                 String firstName = result.getString("firstName");
                 String lastName = result.getString("lastName");
-                dentists.add(new Dentist(registrationNumber, firstName, lastName));
-                logger.info("* Odontólogo * con id " + id + "// nombre: " + firstName + " - apellido: " + lastName + " - matrícula n°: " + registrationNumber);
+                Dentist dentist1 = new Dentist(registrationNumber, firstName, lastName);
+                dentist1.setId(idDentist);
+                dentists.add(dentist1);
+                logger.info("* Odontólogo * con id " + idDentist + "// nombre: " + firstName + " - apellido: " + lastName + " - matrícula n°: " + registrationNumber);
             }
 
             preparedStatement.close();

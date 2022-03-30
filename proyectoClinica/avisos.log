@@ -1,1 +1,15 @@
 [2022-03-29 14:56:17] [ INFO ] [PatientDaoH2:105] Se realizó satisfactoriamente la búsqueda del domicilio con id 1
+[2022-03-30 17:52:45] [ ERROR] [PatientDaoH2:105] org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-30 17:53:14] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 1
+[2022-03-30 17:53:33] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 2----bolivar
+[2022-03-30 17:53:51] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 3----ramón franco
+[2022-03-30 17:54:04] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 2
+[2022-03-30 17:56:05] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 3
+[2022-03-30 17:56:05] [ INFO ] [PatientDaoH2:64] Se eliminó el domicilio con id 3 satisfactoriamente
+[2022-03-30 17:57:51] [ INFO ] [PatientDaoH2:138] * Dommicilio * id 1: calle mitre, número 1234 - localidad quilmes - provincia buenos aires
+[2022-03-30 17:57:51] [ INFO ] [PatientDaoH2:138] * Dommicilio * id 2: calle bolivar, número 1234 - localidad wilde - provincia buenos aires
+[2022-03-30 18:33:29] [ INFO ] [PatientDaoH2:140] * Dommicilio * id 1: calle mitre, número 1234 - localidad quilmes - provincia buenos aires
+[2022-03-30 18:33:29] [ INFO ] [PatientDaoH2:140] * Dommicilio * id 2: calle bolivar, número 1234 - localidad wilde - provincia buenos aires
+[2022-03-30 19:01:22] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 1
+[2022-03-30 19:02:08] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 1

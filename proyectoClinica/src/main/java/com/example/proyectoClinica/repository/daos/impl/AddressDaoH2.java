@@ -129,12 +129,14 @@ public class AddressDaoH2 implements IDao<Address> {
 
             //Obtain results
             while (result.next()) {
-                int idAddress = result.getInt("id");
+                Long idAddress = result.getLong("id");
                 String street = result.getString("street");
                 int number = result.getInt("number");
                 String locality = result.getString("locality");
                 String province = result.getString("province");
-                addresses.add(new Address(street, locality, number, province));
+                Address address1 = new Address(street, locality, number, province);
+                address1.setId(idAddress);
+                addresses.add(address1);
                 logger.info("* Dommicilio * id " + idAddress + ": calle " + street + ", número " + number + " - localidad " + locality + " - provincia " + province);
             }
 

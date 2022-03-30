@@ -100,13 +100,14 @@ public class DentistShiftDaoH2 implements IDao<DentistShift> {
 
             //Obtain results
             while (result.next()) {
-                int idDentistShift = result.getInt("id");
+                Long idDentistShift = result.getLong("id");
                 Date date = result.getDate("date");
                 Long idPatient = result.getLong("patient");
                 Long idDentist = result.getLong("id_dentist");
                 Patient patient = patientDaoH2.findOneById(idPatient);
                 Dentist dentist = dentistDaoH2.findOneById(idDentist);
                 dentistShift1 = new DentistShift(date, patient, dentist);
+                dentistShift1.setId(idDentistShift);
                 logger.info("Se realizó satisfactoriamente la búsqueda del turno con id " + idDentistShift);
             }
 
@@ -141,13 +142,15 @@ public class DentistShiftDaoH2 implements IDao<DentistShift> {
 
             //Obtain results
             while (result.next()) {
-                int idDentistShift = result.getInt("id");
+                Long idDentistShift = result.getLong("id");
                 Date date = result.getDate("date");
                 Long idPatient = result.getLong("patient");
                 Long idDentist = result.getLong("id_dentist");
                 Patient patient = patientDaoH2.findOneById(idPatient);
                 Dentist dentist = dentistDaoH2.findOneById(idDentist);
-                dentistShifts.add(new DentistShift(date, patient, dentist));
+                DentistShift dentistShift1 = new DentistShift(date, patient, dentist);
+                dentistShift1.setId(idDentistShift);
+                dentistShifts.add(dentistShift1);
                 logger.info("* Turno * id " + idDentistShift + ": paciente " + patient + ", odontólogo " + dentist);
             }
 

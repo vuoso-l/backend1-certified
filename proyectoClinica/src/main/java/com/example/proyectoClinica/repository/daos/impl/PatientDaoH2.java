@@ -2,7 +2,6 @@ package com.example.proyectoClinica.repository.daos.impl;
 
 import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Address;
-import com.example.proyectoClinica.domain.Dentist;
 import com.example.proyectoClinica.domain.Patient;
 import com.example.proyectoClinica.util.Util;
 import org.apache.log4j.Logger;
@@ -107,9 +106,9 @@ public class PatientDaoH2 implements IDao<Patient> {
                 int dni = result.getInt("dni");
                 Date admissionDate = result.getDate("admissionDate");
                 Long idAddress = result.getLong("id_address");
-                Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
                 patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address);
+                patient1.setId(idPatient);
                 logger.info("Se realizó satisfactoriamente la búsqueda del paciente con id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
@@ -147,9 +146,9 @@ public class PatientDaoH2 implements IDao<Patient> {
                 int dni = result.getInt("dni");
                 Date admissionDate = result.getDate("admissionDate");
                 Long idAddress = result.getLong("id_address");
-                Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
                 patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address);
+                patient1.setId(idPatient);
                 logger.info("Se realizó satisfactoriamente la búsqueda del paciente con id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
@@ -186,9 +185,10 @@ public class PatientDaoH2 implements IDao<Patient> {
                 int dni = result.getInt("dni");
                 Date admissionDate = result.getDate("admissionDate");
                 Long idAddress = result.getLong("id_address");
-                Long idDentist = result.getLong("id_dentist");
                 Address address = addressDaoH2.findOneById(idAddress);
-                patients.add(new Patient(lastname, firstname, email, dni, admissionDate, address));
+                Patient patient1 = new Patient(lastname, firstname, email, dni, admissionDate, address);
+                patient1.setId(idPatient);
+                patients.add(patient1);
                 logger.info("* Paciente * id " + idPatient + ": apellido " + lastname + ", nombre " + firstname + " - dni " + dni);
             }
 
