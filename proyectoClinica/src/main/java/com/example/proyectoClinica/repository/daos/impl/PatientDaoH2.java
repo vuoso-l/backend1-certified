@@ -3,6 +3,7 @@ package com.example.proyectoClinica.repository.daos.impl;
 import com.example.proyectoClinica.repository.daos.IDao;
 import com.example.proyectoClinica.domain.Address;
 import com.example.proyectoClinica.domain.Patient;
+import com.example.proyectoClinica.servicies.PatientService;
 import com.example.proyectoClinica.util.Util;
 import org.apache.log4j.Logger;
 
@@ -60,11 +61,29 @@ public class PatientDaoH2 implements IDao<Patient> {
         return patient;
     }
 
+    /*PacienteService pacienteService = new PacienteService(new PacienteDAOH2());
+    paciente = pacienteService.buscarId(id);
+    idDomicilio = paciente.getDomicilio().getId();
+
+
+    //creo el servicio de domicilio para borrar el domicilio asociado antes de proceder a borrar al paciente.
+    DomicilioService domicilioService = new DomicilioService(new DomicilioDAOH2());
+            domicilioService.eliminarDomicilio(idDomicilio);*/
+
+
+
+
+
     @Override
     public void delete(Long id) {
+        PatientDaoH2 patientDaoH2 = new PatientDaoH2();
+        //PatientService patientService = new PatientService(new PatientDaoH2());
         try {
             //Conexion to the DB
             connection = getConnection();
+
+            Patient patient = patientDaoH2.findOneById(id);
+            addressDaoH2.delete(patient.getAddress().getId());
 
             //Create sentence
             preparedStatement = connection.prepareStatement("DELETE FROM patient WHERE id = ?");

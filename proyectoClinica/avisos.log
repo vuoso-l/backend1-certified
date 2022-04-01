@@ -13,3 +13,17 @@ Database may be already in use: null. Possible solutions: close all other connec
 [2022-03-30 18:33:29] [ INFO ] [PatientDaoH2:140] * Dommicilio * id 2: calle bolivar, número 1234 - localidad wilde - provincia buenos aires
 [2022-03-30 19:01:22] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 1
 [2022-03-30 19:02:08] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 1
+[2022-03-31 13:23:11] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 4----h
+[2022-03-31 13:23:11] [ INFO ] [PatientDaoH2:53] Se creó el paciente 1----null, null
+[2022-03-31 13:24:40] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-03-31 13:24:40] [ INFO ] [PatientDaoH2:192] * Paciente * id 1: apellido null, nombre null - dni 33489714
+[2022-03-31 13:26:39] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-03-31 13:26:39] [ INFO ] [PatientDaoH2:192] * Paciente * id 1: apellido null, nombre null - dni 33489714
+[2022-03-31 13:26:49] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-03-31 13:26:49] [ INFO ] [PatientDaoH2:152] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido null, nombre null - dni 33489714
+[2022-03-31 13:33:52] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 5----h
+[2022-03-31 13:33:52] [ INFO ] [PatientDaoH2:53] Se creó el paciente 2----null, null
+[2022-03-31 13:34:57] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 6----h
+[2022-03-31 13:34:57] [ INFO ] [PatientDaoH2:53] Se creó el paciente 3----Pérez, Camila
+[2022-03-31 13:45:22] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 7----h
+[2022-03-31 13:45:22] [ INFO ] [PatientDaoH2:53] Se creó el paciente 4----Paz, Yamila
