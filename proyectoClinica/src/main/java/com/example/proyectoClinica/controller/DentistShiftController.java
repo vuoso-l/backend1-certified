@@ -14,7 +14,7 @@ import java.util.List;
 public class DentistShiftController {
     private DentistShiftService dentistShiftService = new DentistShiftService(new DentistShiftDaoH2());
 
-    @PostMapping()
+    @PostMapping("/register")
     public ResponseEntity<DentistShift> dentistShiftRegister(DentistShift dentistShift) throws Exception {
         return ResponseEntity.ok(dentistShiftService.registerDentistShift(dentistShift));
     }

@@ -37,7 +37,7 @@ public class AddressController {
         return ResponseEntity.ok(addressService.findOneById(id));
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public List<Address> findAllAddresses() {
         return addressService.findAll();
     }

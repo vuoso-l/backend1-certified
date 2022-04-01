@@ -14,7 +14,7 @@ import java.util.List;
 public class DentistController {
     private DentistService dentistService = new DentistService(new DentistDaoH2());
 
-    @PostMapping()
+    @PostMapping("/register")
     public ResponseEntity<Dentist> dentistRegister(Dentist dentist) throws Exception {
         return ResponseEntity.ok(dentistService.registerDentist(dentist));
     }
@@ -42,7 +42,7 @@ public class DentistController {
     }
 
     @PutMapping()
-    public ResponseEntity<Dentist> updateDentistt(@RequestBody Dentist dentist) {
+    public ResponseEntity<Dentist> updateDentist(@RequestBody Dentist dentist) {
         ResponseEntity<Dentist> response = null;
 
         if (dentist.getId() != null && dentistService.findOneById(dentist.getId()) != null)

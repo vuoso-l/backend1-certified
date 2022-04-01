@@ -27,3 +27,12 @@ Database may be already in use: null. Possible solutions: close all other connec
 [2022-03-31 13:34:57] [ INFO ] [PatientDaoH2:53] Se creó el paciente 3----Pérez, Camila
 [2022-03-31 13:45:22] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 7----h
 [2022-03-31 13:45:22] [ INFO ] [PatientDaoH2:53] Se creó el paciente 4----Paz, Yamila
+[2022-04-01 16:31:41] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-04-01 16:31:41] [ INFO ] [PatientDaoH2:171] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido null, nombre null - dni 33489714
+[2022-04-01 16:33:01] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:131] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido null, nombre null - dni 33489714
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:98] Se realizó satisfactoriamente la búsqueda del domicilio con id 4
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:131] Se realizó satisfactoriamente la búsqueda del paciente con id 1: apellido null, nombre null - dni 33489714
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:64] Se eliminó el domicilio con id 4 satisfactoriamente
+[2022-04-01 16:34:08] [ INFO ] [PatientDaoH2:94] Se eliminó el paciente con id 1 satisfactoriamente
