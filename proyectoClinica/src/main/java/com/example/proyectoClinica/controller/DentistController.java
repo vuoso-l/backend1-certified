@@ -15,7 +15,7 @@ public class DentistController {
     private DentistService dentistService = new DentistService(new DentistDaoH2());
 
     @PostMapping("/register")
-    public ResponseEntity<Dentist> dentistRegister(Dentist dentist) throws Exception {
+    public ResponseEntity<Dentist> dentistRegister(@RequestBody Dentist dentist) throws Exception {
         return ResponseEntity.ok(dentistService.registerDentist(dentist));
     }
 
@@ -32,7 +32,7 @@ public class DentistController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Dentist> findDentist(Long id) {
+    public ResponseEntity<Dentist> findDentist(@PathVariable Long id) {
         return ResponseEntity.ok(dentistService.findOneById(id));
     }
 

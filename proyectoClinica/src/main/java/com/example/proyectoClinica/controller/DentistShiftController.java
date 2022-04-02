@@ -15,7 +15,7 @@ public class DentistShiftController {
     private DentistShiftService dentistShiftService = new DentistShiftService(new DentistShiftDaoH2());
 
     @PostMapping("/register")
-    public ResponseEntity<DentistShift> dentistShiftRegister(DentistShift dentistShift) throws Exception {
+    public ResponseEntity<DentistShift> dentistShiftRegister(@RequestBody DentistShift dentistShift) throws Exception {
         return ResponseEntity.ok(dentistShiftService.registerDentistShift(dentistShift));
     }
 
@@ -32,7 +32,7 @@ public class DentistShiftController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DentistShift> findDentistShift(Long id) {
+    public ResponseEntity<DentistShift> findDentistShift(@PathVariable Long id) {
         return ResponseEntity.ok(dentistShiftService.findOneById(id));
     }
 
