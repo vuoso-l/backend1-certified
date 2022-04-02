@@ -1,6 +1,6 @@
 package com.example.proyectoClinica.servicies;
 
-import com.example.proyectoClinica.repository.daos.IDao;
+import com.example.proyectoClinica.repository.IDao;
 import com.example.proyectoClinica.domain.DentistShift;
 import org.springframework.stereotype.Service;
 

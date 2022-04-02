@@ -47,3 +47,8 @@ Database may be already in use: null. Possible solutions: close all other connec
 [2022-04-01 18:00:42] [ INFO ] [PatientDaoH2:42] Se creó la dirección con id 39----prueba
 [2022-04-01 18:44:45] [ INFO ] [DentistDaoH2:37] Se creó el odontólogo 1. Sus datos son: * matrícula n° * 123456, * nombre * Carlos y * apellido * Gómez
 [2022-04-01 19:15:26] [ INFO ] [DentistDaoH2:92] Se realizó la búsqueda del odontólogo con id 1 satisfactoriamente. Sus datos son -- nombre: Carlos - apellido: Gómez - matrícula n°: 123456
+[2022-04-02 17:02:54] [ INFO ] [DentistShiftDaoH2:54] Se creó el turno 1----Mon Apr 04 21:00:00 ART 2022
+[2022-04-02 17:04:55] [ ERROR] [DentistShiftDaoH2:118] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "patient" no encontrada
+Column "patient" not found [42122-210]
+[2022-04-02 17:06:49] [ ERROR] [DentistShiftDaoH2:161] org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "date" no encontrada
+Column "date" not found [42122-210]

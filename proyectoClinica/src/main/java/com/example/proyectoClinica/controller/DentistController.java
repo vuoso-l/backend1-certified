@@ -1,8 +1,8 @@
 package com.example.proyectoClinica.controller;
 
-import com.example.proyectoClinica.repository.daos.impl.DentistDaoH2;
+import com.example.proyectoClinica.repository.impl.DentistDaoH2;
 import com.example.proyectoClinica.domain.Dentist;
-import com.example.proyectoClinica.servicies.DentistService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,20 +12,22 @@ import java.util.List;
 @RestController
 @RequestMapping("/dentist")
 public class DentistController {
-    private DentistService dentistService = new DentistService(new DentistDaoH2());
+
+    @Autowired
+    private DentistDaoH2 dentistRepository;
 
     @PostMapping("/register")
     public ResponseEntity<Dentist> dentistRegister(@RequestBody Dentist dentist) throws Exception {
-        return ResponseEntity.ok(dentistService.registerDentist(dentist));
+        return ResponseEntity.ok(dentistRepository.register(dentist));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity deleteDentist(@PathVariable Long id) {
         ResponseEntity res = null;
-        if (dentistService.findOneById(id) == null){
+        if (dentistRepository.findOneById(id) == null){
             res = new ResponseEntity(HttpStatus.NOT_FOUND);
         } else {
-            dentistService.deleteDentist(id);
+            dentistRepository.delete(id);
             res = new ResponseEntity(HttpStatus.NO_CONTENT);
         }
         return res;
@@ -33,20 +35,20 @@ public class DentistController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Dentist> findDentist(@PathVariable Long id) {
-        return ResponseEntity.ok(dentistService.findOneById(id));
+        return ResponseEntity.ok(dentistRepository.findOneById(id));
     }
 
     @GetMapping()
     public List<Dentist> findAllDentists() {
-        return dentistService.findAll();
+        return dentistRepository.findAll();
     }
 
     @PutMapping()
     public ResponseEntity<Dentist> updateDentist(@RequestBody Dentist dentist) {
         ResponseEntity<Dentist> response = null;
 
-        if (dentist.getId() != null && dentistService.findOneById(dentist.getId()) != null)
-            response = ResponseEntity.ok(dentistService.updateDentist(dentist));
+        if (dentist.getId() != null && dentistRepository.findOneById(dentist.getId()) != null)
+            response = ResponseEntity.ok(dentistRepository.update(dentist));
         else
             response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
