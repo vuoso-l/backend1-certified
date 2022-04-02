@@ -1,8 +1,9 @@
-package com.example.proyectoClinica.repository.daos.impl;
+package com.example.proyectoClinica.repository.impl;
 
-import com.example.proyectoClinica.repository.daos.IDao;
+import com.example.proyectoClinica.repository.IDao;
 import com.example.proyectoClinica.domain.Address;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 
 import static com.example.proyectoClinica.config.DbH2.getConnection;
 
+@Repository
 public class AddressDaoH2 implements IDao<Address> {
 
     private static final Logger logger = Logger.getLogger(PatientDaoH2.class);
@@ -154,16 +156,15 @@ public class AddressDaoH2 implements IDao<Address> {
     @Override
     public Address update(Address address) {
         try {
-            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            //Create sentence
             preparedStatement = connection.prepareStatement("UPDATE address SET street = ?, number = ?, locality = ?, province = ? WHERE id = ?");
-            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
             preparedStatement.setString(1, address.getStreet());
             preparedStatement.setInt(2, address.getNumber());
             preparedStatement.setString(3, address.getLocality());
             preparedStatement.setString(4, address.getProvince());
             preparedStatement.setLong(5, address.getId());
 
-            //3 Ejecutar una sentencia SQL
+            //Execute a SQL sentence
             preparedStatement.executeUpdate();
 
             preparedStatement.close();

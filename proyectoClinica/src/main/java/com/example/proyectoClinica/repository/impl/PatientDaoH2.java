@@ -1,11 +1,11 @@
-package com.example.proyectoClinica.repository.daos.impl;
+package com.example.proyectoClinica.repository.impl;
 
-import com.example.proyectoClinica.repository.daos.IDao;
+import com.example.proyectoClinica.repository.IDao;
 import com.example.proyectoClinica.domain.Address;
 import com.example.proyectoClinica.domain.Patient;
-import com.example.proyectoClinica.servicies.PatientService;
 import com.example.proyectoClinica.util.Util;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,6 +13,7 @@ import java.util.List;
 
 import static com.example.proyectoClinica.config.DbH2.getConnection;
 
+@Repository
 public class PatientDaoH2 implements IDao<Patient> {
     private static final Logger logger = Logger.getLogger(PatientDaoH2.class);
     private final AddressDaoH2 addressDaoH2 = new AddressDaoH2();
@@ -27,9 +28,8 @@ public class PatientDaoH2 implements IDao<Patient> {
     public Patient register(Patient patient) throws Exception {
         try {
 
-            //Como primer paso primero debemos guardar el domicilio del paciente
-            //ya que necesitamos el ID del domicilio que se generará en la base de datos para luego
-            //insertar ese id en el campo domicilio_id de la tabla pacientes
+            //First step: save patient address because we need the address id from the DB
+            //to insert this id into id_address in patient table.
             Address address = addressDaoH2.register(patient.getAddress());
             patient.getAddress().setId(address.getId());
 
@@ -60,19 +60,6 @@ public class PatientDaoH2 implements IDao<Patient> {
         }
         return patient;
     }
-
-    /*PacienteService pacienteService = new PacienteService(new PacienteDAOH2());
-    paciente = pacienteService.buscarId(id);
-    idDomicilio = paciente.getDomicilio().getId();
-
-
-    //creo el servicio de domicilio para borrar el domicilio asociado antes de proceder a borrar al paciente.
-    DomicilioService domicilioService = new DomicilioService(new DomicilioDAOH2());
-            domicilioService.eliminarDomicilio(idDomicilio);*/
-
-
-
-
 
     @Override
     public void delete(Long id) {
@@ -225,12 +212,11 @@ public class PatientDaoH2 implements IDao<Patient> {
     @Override
     public Patient update(Patient patient) {
         try {
-            //Como primer paso actualizamos el domicilio del paciente
+            ///First step: update address
             Address address1 = addressDaoH2.update(patient.getAddress());
 
-            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            //Create sentence
             preparedStatement = connection.prepareStatement("UPDATE patient SET lastname = ?, firstname = ?, email = ?, dni = ?, admissionDate = ?, id_address = ? WHERE id = ?");
-            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
             preparedStatement.setString(1, patient.getLastName());
             preparedStatement.setString(2, patient.getFirstName());
             preparedStatement.setString(3, patient.getEmail());
@@ -239,7 +225,7 @@ public class PatientDaoH2 implements IDao<Patient> {
             preparedStatement.setLong(6, patient.getAddress().getId());
             preparedStatement.setLong(8, patient.getId());
 
-            //3 Ejecutar una sentencia SQL
+            //Execute a SQL sentence
             preparedStatement.executeUpdate();
 
             preparedStatement.close();

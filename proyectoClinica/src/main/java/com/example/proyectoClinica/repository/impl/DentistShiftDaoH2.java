@@ -1,11 +1,12 @@
-package com.example.proyectoClinica.repository.daos.impl;
+package com.example.proyectoClinica.repository.impl;
 
-import com.example.proyectoClinica.repository.daos.IDao;
+import com.example.proyectoClinica.repository.IDao;
 import com.example.proyectoClinica.domain.Dentist;
 import com.example.proyectoClinica.domain.DentistShift;
 import com.example.proyectoClinica.domain.Patient;
 import com.example.proyectoClinica.util.Util;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import static com.example.proyectoClinica.config.DbH2.getConnection;
 
+@Repository
 public class DentistShiftDaoH2 implements IDao<DentistShift> {
     private static final Logger logger = Logger.getLogger(DentistShiftDaoH2.class);
     private final PatientDaoH2 patientDaoH2 = new PatientDaoH2();
@@ -28,9 +30,8 @@ public class DentistShiftDaoH2 implements IDao<DentistShift> {
     public DentistShift register(DentistShift dentistShift) throws Exception {
         try {
 
-            //Como primer paso primero debemos guardar el domicilio del paciente
-            //ya que necesitamos el ID del domicilio que se generará en la base de datos para luego
-            //insertar ese id en el campo domicilio_id de la tabla pacientes
+            //First step: save patient and dentist because we need the patient id and dentist id
+            //from the DB to insert this ids into id_patient and id_dentist in dentistShift table.
             Patient patient = patientDaoH2.register(dentistShift.getPatient());
             Dentist dentist = dentistDaoH2.register(dentistShift.getDentist());
             dentistShift.getPatient().setId(patient.getId());
@@ -168,19 +169,18 @@ public class DentistShiftDaoH2 implements IDao<DentistShift> {
     @Override
     public DentistShift update(DentistShift dentistShift) {
         try {
-            //Como primer paso actualizamos el domicilio del paciente
+            //First step: update patient and dentist
             Patient patient1 = patientDaoH2.update(dentistShift.getPatient());
             Dentist dentist1 = dentistDaoH2.update(dentistShift.getDentist());
 
-            //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+            //Create sentence
             preparedStatement = connection.prepareStatement("UPDATE patient SET date = ?, id_patient = ?, id_dentist = ? WHERE id = ?");
-            //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
             preparedStatement.setDate(1, Util.utilDateToSqlDate(dentistShift.getDate()));
             preparedStatement.setLong(2, dentistShift.getPatient().getId());
             preparedStatement.setLong(3, dentistShift.getDentist().getId());
             preparedStatement.setLong(8, dentistShift.getId());
 
-            //3 Ejecutar una sentencia SQL
+            //Execute a SQL sentence
             preparedStatement.executeUpdate();
 
             preparedStatement.close();

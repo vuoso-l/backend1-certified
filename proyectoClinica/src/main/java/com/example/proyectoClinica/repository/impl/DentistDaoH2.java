@@ -1,8 +1,9 @@
-package com.example.proyectoClinica.repository.daos.impl;
+package com.example.proyectoClinica.repository.impl;
 
-import com.example.proyectoClinica.repository.daos.IDao;
+import com.example.proyectoClinica.repository.IDao;
 import com.example.proyectoClinica.domain.Dentist;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 
 import static com.example.proyectoClinica.config.DbH2.getConnection;
 
+@Repository
 public class DentistDaoH2 implements IDao<Dentist> {
     private static final Logger logger = Logger.getLogger(DentistDaoH2.class);
 
